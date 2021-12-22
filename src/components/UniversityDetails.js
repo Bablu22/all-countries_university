@@ -5,16 +5,21 @@ const UniversityDetails = () => {
     const { name } = useParams()
     const [university, setUniversity] = useState([])
 
-    useEffect(() => {
-        fetch(`http://universities.hipolabs.com/search?country=india`)
-            .then(res => res.json())
-            .then(data => {
-                setUniversity(data)
-            })
-    }, [])
+    
 
-    const singleVericty = university.filter(i => i.name === name)
-    console.log(singleVericty)
+    // useEffect(() => {
+    //     fetch(`http://universities.hipolabs.com/search?country=${name}`)
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             setUniversity(data)
+    //         })
+    // }, [])
+
+    // const singleVericty = university.filter(i => i.name === name)
+    // console.log(singleVericty)
+
+
+
 
     return (
         <div>
