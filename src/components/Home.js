@@ -32,7 +32,7 @@ const Home = () => {
     }, [])
 
     useEffect(() => {
-        fetch(`http://universities.hipolabs.com/search?country=india`)
+        fetch(`https://universities.hipolabs.com/search?country=india`)
             .then(res => res.json())
             .then(data => {
                 setUniversity(data)
@@ -43,7 +43,7 @@ const Home = () => {
     const fetchCountry = (country) => {
         setUniversity([])
         setLooding(true)
-        fetch(`http://universities.hipolabs.com/search?country=${country}`)
+        fetch(`https://universities.hipolabs.com/search?country=${country}`)
             .then(res => res.json())
             .then(data => {
                 setUniversity(data)
